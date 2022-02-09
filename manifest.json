@@ -3,8 +3,8 @@
     "short_name": "Hent en hund",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#fff",
-    "theme-color": "fff",
+    "background_color": "#ad4d0c",
+    "theme-color": "#ad4d0c",
     "description": "App to look at cute dogs",
     "icons": [
         {
