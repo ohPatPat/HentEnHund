@@ -6,7 +6,7 @@ let urlsToCache = [
 
 // alle elementer til at skabe appen skal caches
 
-sself.addEventListener('install', function (event) {
+self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open('mysite-static-v3').then(function (cache) {
             return cache.addAll([
