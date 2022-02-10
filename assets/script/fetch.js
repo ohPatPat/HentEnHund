@@ -8,10 +8,9 @@
   })
 
   .catch(function() {
-console.log("Error, couldnt fetch");  
-});
+    //Indhold ved offline
+    window.location.href = "https://ohpatpat.github.io/HentEnHund/info.html";
+  });
 
 
 
-function refresh() {
-    location.reload();  }

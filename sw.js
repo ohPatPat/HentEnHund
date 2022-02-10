@@ -6,20 +6,24 @@ let urlsToCache = [
 
 // alle elementer til at skabe appen skal caches
 
-self.addEventListener('install', function(event) {
-
+sself.addEventListener('install', function (event) {
     event.waitUntil(
-        caches.open(CACHE_NAME)
+        caches.open('mysite-static-v3').then(function (cache) {
+            return cache.addAll([
 
-        .then(function(cache){
-            console.log('Opened cache');
-            return cache.addAll(urlsToCache)
-        })
-    )
-})
-
-self.addEventListener('fetch', function(e){
-    console.log(`intercept req: `+e.request.url);
-
-    
-})
+                index.html,
+                index.js,
+                info.html,
+                manifest.json,
+                sw.js,
+                assets/css/main.css,
+                assets/img/icons/dog-icon-72px.png,
+                assets/img/icons/dog-icon-128px.png,
+                assets/img/icons/dog-icon-192px.png,
+                assets/img/Hund.jpg,
+                // etc,
+                // etc
+            ]);
+        }),
+    );
+});
